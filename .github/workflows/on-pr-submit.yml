@@ -12,7 +12,7 @@ on:
 
 jobs:
   # TODO: Add unit test as well here
-  tests:
+  tests-linux:
     name: Xattrs bindings Tests
     runs-on: ubuntu-latest
     steps:
@@ -24,3 +24,16 @@ jobs:
         run: make fmt-check
       - name: Lint
         run: make lint
+      - name: Run Spec
+        run: crystal spec spec/
+  tests-darwin:
+    name: Xattrs bindings Tests
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Crystal
+        run: |
+          brew update
+          brew install crystal
+      - name: Run Spec
+        run: crystal spec spec/

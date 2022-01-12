@@ -1,0 +1,10 @@
+name: xattrs
+version: 0.1.0
+
+authors:
+  - Aravinda Vishwanathapura <mail@aravindavk.in>
+
+description: |
+  Crystal bindings for Linux/Unix Extended attributes
+
+license: Apache-2.0

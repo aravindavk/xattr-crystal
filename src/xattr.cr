@@ -1,7 +1,7 @@
 require "./linux"
 require "./darwin"
 
-module Xattr
+module XAttr
 end
 
 module FileDirXattrMethods

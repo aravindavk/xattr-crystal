@@ -1,6 +1,6 @@
 require "./helpers"
 
-module Xattr
+module XAttr
   {% if flag?(:darwin) %}
     lib LibXAttr
       fun getxattr(path : LibC::Char*, name : LibC::Char*, value : LibC::Char*, size : LibC::SizeT, position : LibC::UInt32T, options : LibC::Int) : LibC::Int

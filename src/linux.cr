@@ -69,7 +69,7 @@ module XAttr
               LibXAttr.removexattr(path, name)
             end
 
-      check_and_raise_io_error("Failed to remove Xattr", ret)
+      check_and_raise_io_error("Failed to remove xattr", ret)
     end
 
     private def self.list_size(path : String, no_follow = false)

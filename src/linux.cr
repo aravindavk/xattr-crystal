@@ -1,6 +1,6 @@
 require "./helpers"
 
-module Xattrs
+module Xattr
   {% if flag?(:linux) %}
     lib LibXAttr
       fun getxattr(path : LibC::Char*, name : LibC::Char*, value : LibC::Char*, size : LibC::SizeT) : LibC::Int

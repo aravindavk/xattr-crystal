@@ -9,7 +9,7 @@ module FileDirXattrMethods
     XAttr.get(@path, name, no_follow: no_follow)
   end
 
-  def setxattr(name : String, value : String, no_follow = false, only_create = false, only_replace = false)
+  def setxattr(name : String, value, no_follow = false, only_create = false, only_replace = false)
     XAttr.set(@path, name, value, no_follow: no_follow, only_create: only_create, only_replace: only_replace)
   end
 

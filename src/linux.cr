@@ -46,7 +46,7 @@ module XAttr
       get(path, name, size, no_follow: no_follow)
     end
 
-    def self.set(path : String, name : String, value : String, no_follow = false, only_create = false, only_replace = false)
+    def self.set(path : String, name : String, value, no_follow = false, only_create = false, only_replace = false)
       flags = 0
       # If both FLAG_CREATE and FLAG_REPLACE are set
       # then it raises ENODATA if attribute not exists
